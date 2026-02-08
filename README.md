@@ -13,4 +13,4 @@ For windows:
 Double-click on installer.bat
 
 If something stuck, press enter.
-After installing change "YOUR_TOKEN" in "API_TOKEN = 'YOUR_TOKEN'" to your bot token, then run "python bot.py" being in directory cloud-bot
+After installing change "YOUR_TOKEN" in "API_TOKEN = 'YOUR_TOKEN'" in bot.py to your bot token, then run "python bot.py" being in directory cloud-bot
