@@ -15,11 +15,14 @@ python -m venv venv
 ```
 Linux:
 ```bash
+mkdir files && mkdir files/shared
 source venv/bin/activate
 pip install aiogram asyncio
 ```
 Win:
 ```bash
+mkdir files
+mkdir files\shared
 pip install aiogram asyncio
 ```
 
