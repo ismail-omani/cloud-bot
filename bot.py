@@ -64,7 +64,7 @@ async def welcome(message: types.Message):
     f"/dlh file - downloads file from shared\n"
     f"/rmh - removes file from shared\n"
     f"/rnh oldname newname - changes shared file's filename from oldname to newname\n"
-    f"Bot doesn't support circles or albums!!! Works better with ucompressed files\n\n"
+    f"Bot doesn't support circles!!! Works better with ucompressed files\n\n"
     f"Команды:\n/start - запускает бота\n"
     f"/help - показывает этот список\n"
     f"/ls - показывает список всех ваших файлов\n"
@@ -78,7 +78,7 @@ async def welcome(message: types.Message):
     f"/dlh file - скачивает кокретный общедоступный файл\n"
     f"/rmh - удаляет общедоступный файл\n"
     f"/rnh oldname newname - меняет имя общедоступного файла с oldname на newname\n"
-    f"Бот не поддерживает кружки или альбомы!!! Работает лучше с несжатыми файлами\n"
+    f"Бот не поддерживает кружки!!! Работает лучше с несжатыми файлами\n"
     )
 
 @dp.message(Command('ls'))
