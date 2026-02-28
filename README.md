@@ -34,3 +34,8 @@ After installing change "YOUR_TOKEN" in "API_TOKEN = 'YOUR_TOKEN'" in bot.py to 
 python bot.py
 ```
 being in directory cloud-bot
+
+If you launched bot on your server, you will find all uploded files in cloud-bot/files/id, where id is your telegram id. You can see it in bot using command 
+```bash
+/id
+```
