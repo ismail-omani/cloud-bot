@@ -95,6 +95,15 @@ async def ls(message: types.Message):
         ms = ms + i + '\n'
     await message.answer(f'Your files:\n\n{ms}')
 
+@dp.message(Command('id'))
+async def ls(message: types.Message):
+    ids = []
+    with open('users.txt', 'r') as f:
+        c = f.read()
+        ids = c.split('\n')
+    idd = str(message.from_user.id)
+    await message.answer(f'Your Telegram ID is\n{idd}')
+
 @dp.message(Command('lsh'))
 async def lsh(message: types.Message):
     ids = []
