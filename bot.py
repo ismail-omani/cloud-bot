@@ -5,9 +5,14 @@ import asyncio
 import os
 from aiogram.types.input_file import FSInputFile
 import shutil
+from aiogram.client.session.aiohttp import AiohttpSession
+
+
+PROXY_URL = "socks5://127.0.0.1:9050"
+session = AiohttpSession(proxy=PROXY_URL)
 
 API_TOKEN = 'YOUR_TOKEN'
-bot = Bot(token=API_TOKEN)
+bot = Bot(token=API_TOKEN, session=session)
 dp = Dispatcher()
 router = Router()
 __name__ = "__main__"
@@ -262,11 +267,17 @@ async def save(message: types.Message):
     
         await message.answer(f"File saved to/файл сохранен в: {file_name}")
 
+'''
+@dp.message()
+async def save(message: types.Message):
+    ids = []
+    with open('users.txt', 'r') as f:
+        c = f.read()
+        ids = c.split('\n')
+    idd = str(message.from_user.id)
+    await message.answer('Бот временно не работает.\nBot is not working temporary')
 
-
-
-
-
+'''
 
 async def main():
     dp.include_router(router)
