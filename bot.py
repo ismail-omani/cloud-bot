@@ -56,34 +56,32 @@ async def welcome(message: types.Message):
         ids = c.split('\n')
     idd = str(message.from_user.id)
 
-    await message.answer(f"Commands:\n/start - starting bot\n"
-    f"/help - shows that list\n"
-    f"/ls - shows list of your files\n"
-    f"/dlall - download all your files\n"
-    f"/dl file - downloads file\n"
-    f"/rm file - removes file from the cloud\n"
-    f"/rn oldname newname - changes filename from oldname to newname\n"
-    f"/share file - other will see this file using next command\n"
-    f"/lsh - show list of all shared files\n"
-    f"/dlallh - download all shared files(not recommended)\n"
-    f"/dlh file - downloads file from shared\n"
-    f"/rmh - removes file from shared\n"
-    f"/rnh oldname newname - changes shared file's filename from oldname to newname\n"
-    f"Bot doesn't support circles!!! Works better with ucompressed files\n\n"
-    f"Команды:\n/start - запускает бота\n"
-    f"/help - показывает этот список\n"
-    f"/ls - показывает список всех ваших файлов\n"
-    f"/dlall - скачивает все ваши файлы\n"
-    f"/dl file - скачивает файл file\n"
-    f"/rm file - удаляет файл file из облака\n"
-    f"/rn oldname newname - меняет имя файла с oldname на newname\n"
-    f"/share file - все будут видеть файл file используя следующую команду(файл всегда можно удалить из общедоступных)\n"
-    f"/lsh - показывает список общедоступных файлов\n"
-    f"/dlallh - скачивает все общедоступные файлы(не рекомендовано)\n"
-    f"/dlh file - скачивает кокретный общедоступный файл\n"
-    f"/rmh - удаляет общедоступный файл\n"
-    f"/rnh oldname newname - меняет имя общедоступного файла с oldname на newname\n"
-    f"Бот не поддерживает кружки!!! Работает лучше с несжатыми файлами\n"
+    await message.answer("""Commands:\n/start - starting bot\n
+    /help - shows that list\n
+    /ls - shows list of your files\n
+    /dlall - download all your files\n
+    /rm file - removes file from the cloud\n
+    /rn oldname newname - changes filename from oldname to newname\n
+    /share file - other will see this file using next command\n
+    /lsh - show list of all shared files\n
+    /dlallh - download all shared files(not recommended)\n
+    /dlh file - downloads file from shared\n
+    /rmh - removes file from shared\n
+    /rnh oldname newname - changes shared file's filename from oldname to newname\n
+    Bot doesn't support circles!!! Works better with ucompressed files\n\n
+    Команды:\n/start - запускает бота\n
+    /help - показывает этот список\n
+    /ls - показывает список всех ваших файлов\n
+    /dlall - скачивает все ваши файлы\n
+    /rm file - удаляет файл file из облака\n
+    /rn oldname newname - меняет имя файла с oldname на newname\n
+    /share file - все будут видеть файл file используя следующую команду(файл всегда можно удалить из общедоступных)\n
+    /lsh - показывает список общедоступных файлов\n
+    /dlallh - скачивает все общедоступные файлы(не рекомендовано)\n
+    /dlh file - скачивает кокретный общедоступный файл\n
+    /rmh - удаляет общедоступный файл\n
+    /rnh oldname newname - меняет имя общедоступного файла с oldname на newname\n
+    Бот не поддерживает кружки!!! Работает лучше с несжатыми файлами\n"""
     )
 
 @dp.message(Command('ls'))
@@ -158,13 +156,14 @@ async def save(message: types.Message):
         c = f.read()
         ids = c.split('\n')
     idd = str(message.from_user.id)
+    dirr = 'files/'+idd
+    files = os.listdir(dirr)
 
     try:
         
 
-        if message.text.split(maxsplit=1)[0] == '/dl':
-            sp = message.text.split(maxsplit=1)
-            t = sp[1]
+        if message.text in files:
+            t = message.text.strip()
         
             try:
                 document = FSInputFile(f'files/{idd}/{t}')
