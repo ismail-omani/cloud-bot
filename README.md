@@ -16,20 +16,18 @@ python -m venv venv
 ```
 Linux:
 ```bash
-mkdir files && mkdir files/shared
 source venv/bin/activate
-pip install aiogram asyncio
-pip install aiohttp-socks #if you need tor
 ```
 Win:
 ```bash
-mkdir files
-mkdir files\shared
 .\venv\Scripts\Activate.ps1
+```
+
+```bash
 pip install aiogram asyncio
 pip install aiohttp-socks #if you need tor
 ```
-If you are from Russia or Telegram is banned in your country, I'd recommend you to configure tor.
+If you are in Russia or Telegram is banned in your country, I'd recommend you to configure tor.
 Here is instruction, how to install and use tor on PC with Linux and apt package manager: https://habr.com/ru/articles/797847/. Make sure that tor is running. File bot.py is already configured to use tor. Comment strings
 ```bash
 from aiogram.client.session.aiohttp import AiohttpSession
@@ -51,9 +49,15 @@ After installing change "YOUR_TOKEN" in "API_TOKEN = 'YOUR_TOKEN'" in bot.py to 
 ```bash
 python bot.py
 ```
-being in directory cloud-bot
+being in directory cloud-bot.
 
-If you launched bot on your server, you will find all uploded files in cloud-bot/files/id, where id is your telegram id. You can see it in bot using command 
+If you need to run bot in the background on Linux, run
+```bash
+nohup python3 bot.py > output.log 2>&1 &
+```
+You will see PID, save it to kill bot process
+
+If you ran bot on your server, you will find all uploded files in cloud-bot/files/id, where id is your telegram id. You can see it in bot using command 
 ```bash
 /id
 ```
