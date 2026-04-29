@@ -16,5 +16,6 @@ sed -i "s/YOUR_TOKEN/$token/g" bot.py
 
 echo Installation complete. Follow the instructions:
 
+echo "cd cloud-bot"
 echo "source venv/bin/activate"
 echo "nohup python3 bot.py > output.log 2>&1 & echo $! > bot.pid"
