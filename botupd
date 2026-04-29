@@ -8,4 +8,5 @@ git update-index --skip-worktree bot.pid
 git ls-files files/ | xargs git update-index --skip-worktree
 git ls-files -v | grep ^S
 git pull origin main
+source venv/bin/activate
 nohup python3 bot.py > output.log 2>&1 & echo $! > bot.pid
