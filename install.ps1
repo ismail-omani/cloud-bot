@@ -16,5 +16,5 @@ Write-Host "Installation complete. Follow the instructions:"
 Write-Host "cd cloud-bot"
 Write-Host ".\venv\Scripts\Activate.ps1"
 Write-Host "Start-Process -NoNewWindow python -ArgumentList "bot.py" -RedirectStandardOutput output.log -RedirectStandardError output.log"
-Write-Host "$pid = (Get-Process python | Where-Object {$_.StartTime -eq (Get-Process python | Sort-Object StartTime -Descending | Select-Object -First 1).StartTime}).Id"
-Write-Host "$pid | Out-File bot.pid"
+Write-Host '$pid = (Get-Process python | Where-Object {$_.StartTime -eq (Get-Process python | Sort-Object StartTime -Descending | Select-Object -First 1).StartTime}).Id'
+Write-Host '$pid | Out-File bot.pid'
