@@ -50,3 +50,5 @@ If you ran bot on your server, you will find all uploded files in cloud-bot/file
 ```bash
 /id
 ```
+
+For all questions contact me: https://t.me/ismail_sayed_mohammed
