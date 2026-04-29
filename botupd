@@ -1,3 +1,5 @@
+#!/bin/bash
+#for linux only
 kill $(cat bot.pid)
 cd ~/cloud-bot
 git update-index --skip-worktree users.txt

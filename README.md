@@ -6,9 +6,11 @@ Better works on linux
 Installation:
 You need python3 and git installed.
 ```bash
-./install.sh #for linux
+curl -O  https://raw.githubusercontent.com/ismail-omani/cloud-bot/main/install.sh  #for everything
 
-./install.ps1   #for win, but not recommended
+chmod +x install.sh && ./install.sh  #for linux
+
+./install.ps1   #for windows, but not recommended
 ```
 
 If you are in Russia or Telegram is banned in your country, I'd recommend you to configure TOR.

@@ -14,5 +14,7 @@ git ls-files -v | grep ^S
 read -p "Your bot token: " token
 sed -i "s/YOUR_TOKEN/$token/g" bot.py
 
-nohup python3 bot.py > output.log 2>&1 & echo $! > bot.pid
-echo Installation complete. Send /start to your bot
+echo Installation complete. Follow the instructions:
+
+echo "source venv/bin/activate"
+echo "nohup python3 bot.py > output.log 2>&1 & echo $! > bot.pid"
