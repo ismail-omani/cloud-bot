@@ -6,27 +6,11 @@ Better works on linux
 Installation:
 You need python3 and git installed.
 ```bash
-git clone https://github.com/ismail-omani/cloud-bot.git
-```
-```bash
-cd cloud-bot
-```
-```bash
-python -m venv venv
-```
-Linux:
-```bash
-source venv/bin/activate
-```
-Win:
-```bash
-.\venv\Scripts\Activate.ps1
+./install.sh #for linux
+
+./install.ps1   #for win, but not recommended
 ```
 
-```bash
-pip install aiogram asyncio
-pip install aiohttp-socks #if you need tor
-```
 If you are in Russia or Telegram is banned in your country, I'd recommend you to configure TOR.
 Here is instruction, how to install and use tor on PC with Linux and apt package manager: https://habr.com/ru/articles/797847/. Make sure that tor is running. File bot.py is already configured to use TOR. Comment strings
 ```bash
