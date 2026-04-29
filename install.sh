@@ -2,6 +2,7 @@
 
 git clone https://github.com/ismail-omani/cloud-bot.git
 cd cloud-bot
+chmod +x botupd
 python -m venv venv
 source venv/bin/activate
 pip install aiogram asyncio aiohttp-socks
