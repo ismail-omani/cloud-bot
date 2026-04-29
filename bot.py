@@ -45,7 +45,7 @@ async def welcome(message: types.Message):
         f"Hello! This is cloud storage bot! Just send file here to upload it. Type /help for manual\n"
         f"Creator: t.me/Ismail_Omani\n"
         f"Привет! Это бот для управления облачным хранилищем! Просто пришли файл, чтобы выгрузить его. Напиши /help для получения мануала\n"
-        f"Creator: t.me/Ismail_Omani"
+        f"Создатель: t.me/Ismail_Omani"
     )
 
 @dp.message(Command('help'))
