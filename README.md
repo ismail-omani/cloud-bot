@@ -45,6 +45,11 @@ You will see PID, it wil be saved to bot.pid. When you will need to kill bot pro
 ```bash
 kill $(echo bot.pid)
 ```
+To update bot run:
+```bash
+cd cloud-bot
+./botupd
+```
 
 If you ran bot on your server, you will find all uploded files in cloud-bot/files/id, where id is your Telegram id. You can see it in bot using command 
 ```bash
