@@ -53,9 +53,12 @@ being in directory cloud-bot.
 
 If you need to run bot in the background on Linux, run
 ```bash
-nohup python3 bot.py > output.log 2>&1 &
+nohup python3 bot.py > output.log 2>&1 & echo $! > bot.pid
 ```
-You will see PID, save it to kill bot process
+You will see PID, it wil be saved to bot.pid. When you will need to kill bot process - run 
+```bash
+kill $(echo bot.pid)
+```
 
 If you ran bot on your server, you will find all uploded files in cloud-bot/files/id, where id is your Telegram id. You can see it in bot using command 
 ```bash
