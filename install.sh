@@ -4,7 +4,7 @@ git clone https://github.com/ismail-omani/cloud-bot.git
 cd cloud-bot
 python -m venv venv
 source venv/bin/activate
-pip install aiogram asyncio aiohttp-socks
+pip install -r requirements.txt
 git update-index --skip-worktree users.txt
 git update-index --skip-worktree output.log
 git update-index --skip-worktree bot.pid
