@@ -1,5 +1,6 @@
 from aiogram import *
 from aiogram.types import *
+from aiogram.enums import ParseMode
 from aiogram.filters import *
 import asyncio
 import os
@@ -95,7 +96,7 @@ async def ls(message: types.Message):
     files = os.listdir(dirr)
     ms = ''
     for i in files:
-        ms = ms + f"<pre>{i}</pre>" + '\n'
+        ms = ms + f"<code>{i}</code>" + '\n'
     await message.answer(f'Your files:\n\n{ms}', parse_mode=ParseMode.HTML)
 
 @dp.message(Command('id'))
