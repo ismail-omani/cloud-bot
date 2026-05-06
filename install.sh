@@ -2,7 +2,6 @@
 
 git clone https://github.com/ismail-omani/cloud-bot.git
 cd cloud-bot
-chmod +x botupd
 python -m venv venv
 source venv/bin/activate
 pip install aiogram asyncio aiohttp-socks
@@ -14,9 +13,9 @@ git ls-files -v | grep ^S
 
 read -p "Your bot token: " token
 sed -i "s/YOUR_TOKEN/$token/g" bot.py
-
+echo $token > $HOME/cloud-bot/cloudtoken
 echo Installation complete. Follow the instructions:
 
 echo "cd cloud-bot"
 echo "source venv/bin/activate"
-echo 'nohup python3 bot.py > output.log 2>&1 & echo $! > bot.pid'
+echo "nohup python3 bot.py > output.log 2>&1 & echo $! > bot.pid"
