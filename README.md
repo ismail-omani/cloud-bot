@@ -4,7 +4,7 @@ Source code of https://t.me/ismail_cloud_bot
 Better works on linux
 
 Installation:
-You need python3 and git installed.
+You need python3 and git installed. Windows installer is not updated, use WSL
 ```bash
 curl -O  https://raw.githubusercontent.com/ismail-omani/cloud-bot/main/install.sh  #for everything
 
