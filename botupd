@@ -5,11 +5,10 @@ cd ~/cloud-bot
 git update-index --skip-worktree users.txt
 git update-index --skip-worktree output.log
 git update-index --skip-worktree bot.pid
+git update-index --skip-worktree config.py
 git ls-files files/ | xargs git update-index --skip-worktree
 git ls-files -v | grep ^S
 git pull origin main
-token = $(echo $HOME/cloud-bot/cloudtoken)
-sed -i "s/YOUR_TOKEN/$token/g" bot.py
 echo Bot is updated. Follow the instructions:
 
 echo "cd cloud-bot"

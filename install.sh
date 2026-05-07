@@ -8,11 +8,12 @@ pip install -r requirements.txt
 git update-index --skip-worktree users.txt
 git update-index --skip-worktree output.log
 git update-index --skip-worktree bot.pid
+git update-index --skip-worktree config.py
 git ls-files files/ | xargs git update-index --skip-worktree
 git ls-files -v | grep ^S
 
 read -p "Your bot token: " token
-sed -i "s/YOUR_TOKEN/$token/g" bot.py
+sed -i "s/YOUR_TOKEN/$token/g" config.py
 echo $token > $HOME/cloud-bot/cloudtoken
 echo Installation complete. Follow the instructions:
 
