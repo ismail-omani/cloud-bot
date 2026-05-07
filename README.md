@@ -31,7 +31,8 @@ bot = Bot(token=API_TOKEN, session=session)
 if you don't need TOR.
 
 If something stuck, press enter.
-After installing change "YOUR_TOKEN" in "API_TOKEN = 'YOUR_TOKEN'" in bot.py to your bot token, then run 
+
+To run bot, run
 ```bash
 python bot.py
 ```
