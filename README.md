@@ -14,7 +14,7 @@ chmod +x install.sh && ./install.sh  #for linux
 ```
 
 If you are in Russia or Telegram is banned in your country, I'd recommend you to configure TOR.
-Here is instruction, how to install and use tor on PC with Linux and apt package manager: https://habr.com/ru/articles/797847/. Make sure that tor is running. File bot.py is already configured to use TOR. Comment strings
+Here is instruction, how to install and use tor on PC with Linux and apt package manager: https://habr.com/ru/articles/797847/. Make sure that tor is running. File config.py is already configured to use TOR. Comment strings
 ```bash
 from aiogram.client.session.aiohttp import AiohttpSession
 PROXY_URL = "socks5://127.0.0.1:9050"
@@ -56,4 +56,4 @@ If you ran bot on your server, you will find all uploded files in cloud-bot/file
 /id
 ```
 
-For all questions contact me: https://t.me/ismail_sayed_mohammed
+For all questions contact me: https://t.me/osint_nigeria
