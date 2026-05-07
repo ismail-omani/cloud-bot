@@ -117,8 +117,8 @@ async def lsh(message: types.Message):
     files = os.listdir(dirr)
     ms = ''
     for i in files:
-        ms = ms + i + '\n'
-    await message.answer(f'Shared files:\n\n{ms}')
+       ms = ms + f"<code>{i}</code>" + '\n'
+    await message.answer(f'Your files:\n\n{ms}', parse_mode=ParseMode.HTML)
 
 @dp.message(Command('dlall'))
 async def ls(message: types.Message):
