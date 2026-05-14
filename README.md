@@ -1,17 +1,13 @@
 # cloud-bot
 Source code of https://t.me/ismail_cloud_bot
 
-Better works on Linux
-
-Installation:
-You need python3, tmux, git and curl installed. Windows installer is not updated, use WSL
+Installation (only for Linux):
+You need python3, tmux, git and curl installed.
 
 ```bash
-curl -O  https://raw.githubusercontent.com/ismail-omani/cloud-bot/main/install.sh  #for everything
+curl -O  https://raw.githubusercontent.com/ismail-omani/cloud-bot/main/install.sh
 
 chmod +x install.sh && ./install.sh  #for linux
-
-./install.ps1   #for windows, but not recommended
 ```
 Then you'll see instructions what to do to run bot
  
