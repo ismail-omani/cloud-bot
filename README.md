@@ -11,9 +11,10 @@ chmod +x install.sh && ./install.sh
 ```
 Then you'll see instructions what to do to run bot
  
-If you are in Russia or Telegram is banned in your country, I'd recommend you to configure TOR.
-Become sure that tor is running. File bot.py is already configured to use TOR. Comment strings
+If you are in Russia or Telegram is banned in your country, I'd recommend you to configure TOR. You can find tutorials in Internet or ask AI
+Be sure that tor is running. File bot.py is already configured to use TOR. 
 
+If you don't need TOR, comment strings
 ```python
 from aiogram.client.session.aiohttp import AiohttpSession
 PROXY_URL = "socks5://127.0.0.1:9050"
@@ -27,7 +28,6 @@ from
 ```python
 bot = Bot(token=API_TOKEN, session=session)
 ```
-if you don't need TOR.
 
 If something stuck, press enter.
 
