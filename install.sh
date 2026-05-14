@@ -19,4 +19,8 @@ echo Installation complete. Follow the instructions:
 echo
 echo "cd cloud-bot"
 echo "source venv/bin/activate"
-echo 'nohup python3 bot.py > output.log 2>&1 & echo $! > bot.pid'
+echo 'tmux new -s bot'
+exho
+echo 'Then you will appear in tmux session. Run "python3 bot.py" to run bot'
+echo 'To disattach press Ctrl+B, then D'
+echo 'To return back to session: tmux attach -t bot'
