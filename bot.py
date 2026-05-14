@@ -104,7 +104,7 @@ async def ls(message: types.Message):
         c = f.read()
         ids = c.split('\n')
     idd = str(message.from_user.id)
-    await message.answer(f'Your Telegram ID is\n{idd}')
+    await message.answer(f'Your Telegram ID is\n<code>{idd}</code>', parse_mode=ParseMode.HTML)
 
 @dp.message(Command('lsh'))
 async def lsh(message: types.Message):
@@ -187,7 +187,7 @@ async def save(message: types.Message):
 
             try:
                 os.remove(f'files/{idd}/{t}')
-                await message.answer(f'File {t} has been removed.\nФайл {t} был удален.')
+                await message.answer(f'File <code>{t}</code> has been removed.\nФайл <code>{t}</code> был удален.', parse_mode=ParseMode.HTML)
             except Exception as e:
                 await message.answer("File doesn't exists or wrong syntax.\nТакого файла не существует или неправильный ввод")
 
@@ -197,7 +197,7 @@ async def save(message: types.Message):
 
             try:
                 os.remove(f'files/shared/{t}')
-                await message.answer(f'File {t} has been removed.\nФайл {t} был удален.')
+                await message.answer(f'File <code>{t}</code> has been removed.\nФайл <code>{t}</code> был удален.', parse_mode=ParseMode.HTML)
             except Exception as e:
                 await message.answer("File doesn't exists or wrong syntax.\nТакого файла не существует или неправильный ввод")
 
@@ -208,7 +208,7 @@ async def save(message: types.Message):
             tt = sp[2]
             try:
                 os.rename(f'files/{idd}/{t}', f'files/{idd}/{tt}')
-                await message.answer(f'File {t} has been renamed to {tt}.\nФайл {t} был переименован в {tt}.')
+                await message.answer(f'File <code>{t}</code> has been renamed to <code>{tt}</code>.\nФайл <code>{t}</code> был переименован в <code>{tt}</code>.', parse_mode=ParseMode.HTML)
             except Exception as e:
                 await message.answer("File doesn't exists or wrong syntax.\nТакого файла не существует или неправильный ввод")
 
@@ -218,7 +218,7 @@ async def save(message: types.Message):
             tt = sp[2]
             try:
                 os.rename(f'files/shared/{t}', f'files/shared/{tt}')
-                await message.answer(f'File {t} has been renamed to {tt}.\nФайл {t} был переименован в {tt}.')
+                await message.answer(f'File <code>{t}</code> has been renamed to <code>{tt}</code>.\nФайл <code>{t}</code> был переименован в <code>{tt}</code>.', parse_mode=ParseMode.HTML)
             except Exception as e:
                 await message.answer("File doesn't exists or wrong syntax.\nТакого файла не существует или неправильный ввод")
 
@@ -229,7 +229,7 @@ async def save(message: types.Message):
 
             try:
                 shutil.copy(f'files/{idd}/{t}', f'files/shared/{t}')
-                await message.answer(f'File {t} is shared with everyone now.\nФайл {t} теперь виден всем.')
+                await message.answer(f'File <code>{t}</code> is shared with everyone now.\nФайл <code>{t}</code> теперь виден всем.', parse_mode=ParseMode.HTML)
             except Exception as e:
                 await message.answer("File doesn't exists or wrong syntax.\nТакого файла не существует или неправильный ввод")
 
@@ -263,7 +263,7 @@ async def save(message: types.Message):
         file = await bot.get_file(file_info.file_id)
         await bot.download_file(file.file_path, f"files/{idd}/{file_name}")
     
-        await message.answer(f"File saved to/файл сохранен в: {file_name}")
+        await message.answer(f"File saved to/файл сохранен в: <code>{file_name}</code>", parse_mode=ParseMode.HTML)
 
 '''
 @dp.message()
