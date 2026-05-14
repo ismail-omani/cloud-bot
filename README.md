@@ -7,7 +7,7 @@ You need python3, tmux, git and curl installed.
 ```bash
 curl -O  https://raw.githubusercontent.com/ismail-omani/cloud-bot/main/install.sh
 
-chmod +x install.sh && ./install.sh  #for linux
+chmod +x install.sh && ./install.sh
 ```
 Then you'll see instructions what to do to run bot
  
