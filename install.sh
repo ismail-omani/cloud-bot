@@ -17,10 +17,12 @@ sed -i "s/YOUR_TOKEN/$token/g" config.py
 echo $token > $HOME/cloud-bot/cloudtoken
 echo Installation complete. Follow the instructions:
 echo
+echo 'tmux new -s bot'
+echo
+echo 'Then you will appear in tmux session.'
+echo
 echo "cd cloud-bot"
 echo "source venv/bin/activate"
-echo 'tmux new -s bot'
-exho
-echo 'Then you will appear in tmux session. Run "python3 bot.py" to run bot'
+echo 'python3 bot.py'
 echo 'To disattach press Ctrl+B, then D'
 echo 'To return back to session: tmux attach -t bot'
