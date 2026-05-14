@@ -8,10 +8,11 @@ from aiogram.types.input_file import FSInputFile
 import shutil
 from aiogram.client.session.aiohttp import AiohttpSession
 from config import API_TOKEN
-
+'''
 PROXY_URL = "socks5://127.0.0.1:9050"
 session = AiohttpSession(proxy=PROXY_URL)
-bot = Bot(token=API_TOKEN, session=session)
+'''
+bot = Bot(token=API_TOKEN)
 dp = Dispatcher()
 router = Router()
 __name__ = "__main__"
